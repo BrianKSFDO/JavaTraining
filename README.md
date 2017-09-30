@@ -4,3 +4,5 @@ Test - To remove a file from master on Github
 
 If need to remove Commit history with git commands:
 https://gist.github.com/heiswayi/350e2afda8cece810c0f6116dadbe651
+
+Branch test
