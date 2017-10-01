@@ -25,3 +25,41 @@ dependencies {
 apply plugin: 'project-report'  // built in plugin in Gradle, have to turn on
 
 //  buildDir = 'myBuild' // creates a 'myBuild' directory instead of 'build'
+
+task showDate {
+    //dependsOn build // This will run build first
+    group = 'My Tasks Group'
+    description = 'Task WITH a group - Show current date'
+    doLast {
+        println "Will display on both 'gradle tasks' and 'gradle tasks --all'"
+        println 'My Tasks WITH a group- Current Date: ' + new Date()
+        println ''
+    }
+}
+
+task showDateWithoutGroup {
+    //dependsOn build // This will run build first
+    description = 'Task WITHOUT a group - Show current date'
+    doLast {
+        println "Will display only on 'gradle tasks --all' under 'Other Tasks'"
+        println 'My Tasks WITHOUT a group- Current Date: ' + new Date()
+        println ''
+    }
+}
+
+// Write tasks using DSL (Domain Specific Language) Java/Groovy code
+class ShowDateJava extends DefaultTask {
+
+    String dateMessage = 'DSL Java Date is: '
+
+    @TaskAction
+    void showDateMethod() {
+        println dateMessage + new Date()
+    }
+}
+
+task showDateMethod(type: ShowDateJava)
+
+task customShowDate(type: ShowDateJava) {
+    dateMessage = "Groovy Custom time is: "
+}
