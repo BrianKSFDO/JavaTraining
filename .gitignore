@@ -4,6 +4,9 @@
 /out
 ./.idea
 JavaTraining.iml
+.gradle/
+build/
+
 
 # Compiled class file
 *.class

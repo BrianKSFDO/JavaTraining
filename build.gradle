@@ -1,0 +1,24 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+project.sourceCompatibility = 1.8
+
+sourceSets {
+    main {
+        java.srcDirs = ['src']
+    }
+}
+
+// Can also do project.dependencies
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile project(':json-display') // ********* tells Gradle to bring in json-display JAR and bring into project JAR
+}
+
+// Can also do project.repo's...
+project.repositories {
+    mavenCentral()
+}
+
+apply plugin: 'project-report'

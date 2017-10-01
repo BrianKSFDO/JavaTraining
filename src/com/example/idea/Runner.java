@@ -29,8 +29,6 @@ public class Runner {
         String name = "Len";
         String name2 = "Len";
 
-        List<String> values = new LinkedList<>();
-
         if (name.equals(name2))
             System.out.println("It equals!");
 
@@ -39,33 +37,33 @@ public class Runner {
         // sout + TAB
         System.out.println("Hello World!");
 
-        // TIP CTRL + SHIFT + ENTER will autocomplete line if possible (i.e. finish "); in a String
-        // TIP SHIFT + F6 will refactor/rename all instances (changed s1 to str1)
-        String str1 = getInput("Enter a numeric value: ");
-        String s2 = getInput("Enter a numeric value: ");
-        String operation = getInput("Choose an operation (+-/*): ");
-
-        double result;
-
-        switch (operation) {
-            case "+":
-                result = addValues(str1, s2);
-                break;
-            case "-":
-                result = subtractValues(str1, s2);
-                break;
-            case "/":
-                result = divideValues(str1, s2);
-                break;
-            case "*":
-                result = multiplyValues(str1, s2);
-                break;
-            default:
-                System.out.println("Invalid operation!  Select +*/-");
-                return;
-        }
-
-        System.out.println("Answer is: " + result);
+//        // TIP CTRL + SHIFT + ENTER will autocomplete line if possible (i.e. finish "); in a String
+//        // TIP SHIFT + F6 will refactor/rename all instances (changed s1 to str1)
+//        String str1 = getInput("Enter a numeric value: ");
+//        String s2 = getInput("Enter a numeric value: ");
+//        String operation = getInput("Choose an operation (+-/*): ");
+//
+//        double result;
+//
+//        switch (operation) {
+//            case "+":
+//                result = addValues(str1, s2);
+//                break;
+//            case "-":
+//                result = subtractValues(str1, s2);
+//                break;
+//            case "/":
+//                result = divideValues(str1, s2);
+//                break;
+//            case "*":
+//                result = multiplyValues(str1, s2);
+//                break;
+//            default:
+//                System.out.println("Invalid operation!  Select +*/-");
+//                return;
+//        }
+//
+//        System.out.println("Answer is: " + result);
 
         for (int i = 1; i < 2; i++) {
             System.out.println(i);
@@ -83,16 +81,8 @@ public class Runner {
         String p1gson = gson.toJson(p1);
         System.out.println("Output Person Object json: " + p1gson);
 
-        Gson gson2 = new Gson();
-        String colorsGson = gson.toJson(colors);
-        System.out.println("String Array json: " + colorsGson);
+        JsonDisplay.showJson(p1);
 
-        List<Integer> ints = new ArrayList<>();
-        ints.add(1);
-        ints.add(3);
-        Gson gson3 = new Gson();
-        String intListGson = gson3.toJson(ints);
-        System.out.println("List of Integers json: " + intListGson);
     }
 
     private static String getInput(String prompt) {
