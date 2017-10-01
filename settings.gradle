@@ -2,3 +2,4 @@
 
 rootProject.name = 'JavaTraining'  // corresponds to Project name and location
 include 'json-display'  //  what additional projects are included, at the root directory
+include 'show-date'
