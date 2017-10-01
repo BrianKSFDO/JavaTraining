@@ -1,3 +1,10 @@
+### WINDOWS Env
+
+### Is the thin "layer" around Gradle
+### Checks to see that the requested version of Gradle is installed
+### Passes the command onto the real Gradle
+
+
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem

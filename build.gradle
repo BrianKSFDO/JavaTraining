@@ -1,13 +1,19 @@
-version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
+version '1.0-SNAPSHOT'  // build artifact we are producing
 
-project.sourceCompatibility = 1.8
+apply plugin: 'java'  // tells Gradle this is for Java
+
+project.sourceCompatibility = 1.8  // Java 1.8
 
 sourceSets {
     main {
         java.srcDirs = ['src']
     }
+}
+
+// Can also do project.repo's...
+project.repositories {  //  repo's Gradle will use to get external dependencies
+    mavenCentral()
 }
 
 // Can also do project.dependencies
@@ -16,9 +22,6 @@ dependencies {
     compile project(':json-display') // ********* tells Gradle to bring in json-display JAR and bring into project JAR
 }
 
-// Can also do project.repo's...
-project.repositories {
-    mavenCentral()
-}
+apply plugin: 'project-report'  // built in plugin in Gradle, have to turn on
 
-apply plugin: 'project-report'
+//  buildDir = 'myBuild' // creates a 'myBuild' directory instead of 'build'

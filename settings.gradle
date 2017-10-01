@@ -1,3 +1,5 @@
-rootProject.name = 'JavaTraining'
-include 'json-display'
+// settings.gradle - describes what the Gradle projects are
+
+rootProject.name = 'JavaTraining'  // corresponds to Project name and location
+include 'json-display'  //  what additional projects are included, at the root directory
 
