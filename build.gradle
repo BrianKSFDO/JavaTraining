@@ -72,4 +72,8 @@ buildscript {
 
 apply plugin: 'show-date-plugin'
 
+task finalize {
+    println 'WOOT WOOT Gradle Build is successful!!!!'
+}
 
+build.finalizedBy(finalize)
