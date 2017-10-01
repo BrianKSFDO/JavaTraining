@@ -1,0 +1,75 @@
+
+version '1.0-SNAPSHOT'  // build artifact we are producing
+
+apply plugin: 'java'  // tells Gradle this is for Java
+
+project.sourceCompatibility = 1.8  // Java 1.8
+
+sourceSets {
+    main {
+        java.srcDirs = ['src']
+    }
+}
+
+// Can also do project.repo's...
+project.repositories {  //  repo's Gradle will use to get external dependencies
+    mavenCentral()
+}
+
+// Can also do project.dependencies
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile project(':json-display') // ********* tells Gradle to bring in json-display JAR and bring into project JAR
+}
+
+apply plugin: 'project-report'  // built in plugin in Gradle, have to turn on
+
+//  buildDir = 'myBuild' // creates a 'myBuild' directory instead of 'build'
+
+task showDateWithGroup {
+    //dependsOn build // This will run build first
+    group = 'My Tasks Group'
+    description = 'Task WITH a group - Show current date'
+    doLast {
+        println "Will display on both 'gradle tasks' and 'gradle tasks --all'"
+        println 'My Tasks WITH a group- Current Date: ' + new Date()
+        println ''
+    }
+}
+
+task showDateWithoutGroup {
+    //dependsOn build // This will run build first
+    description = 'Task WITHOUT a group - Show current date'
+    doLast {
+        println "Will display only on 'gradle tasks --all' under 'Other Tasks'"
+        println 'My Tasks WITHOUT a group- Current Date: ' + new Date()
+        println ''
+    }
+}
+
+// Write tasks using DSL (Domain Specific Language) Java/Groovy code
+class ShowDateJava extends DefaultTask {
+
+    String dateMessageOutput = 'Class to extend DefaultTask- Date is: '
+
+    @TaskAction
+    void showDateMethod() {
+        println dateMessageOutput + new Date()
+    }
+}
+
+task showDateMethod(type: ShowDateJava)
+
+task customShowDate(type: ShowDateJava) {
+    dateMessageOutput = "Groovy Custom time is: "
+}
+
+buildscript {
+    dependencies {   //  Dependencies for buildscript, not a project dependency
+        classpath files('show-date/build/libs/show-date-1.0-SNAPSHOT.jar')
+    }
+}
+
+apply plugin: 'show-date-plugin'
+
+
