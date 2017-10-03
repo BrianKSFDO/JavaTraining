@@ -65,7 +65,7 @@ public class Runner {
 //
 //        System.out.println("Answer is: " + result);
 
-        for (int i = 1; i < 2; i++) {
+        for (int i = 1; i < 3; i++) {
             System.out.println(i);
         }
 

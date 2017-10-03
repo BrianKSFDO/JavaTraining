@@ -28,7 +28,6 @@ public class JsonDisplay {
         String intListGson = gson3.toJson(ints);
         System.out.println("List of Integers json: " + intListGson);
 
-
         return null;
     }
 }
