@@ -1,4 +1,4 @@
-package com.example.idea.Strings;
+package com.example.idea.strings;
 
 import java.util.Scanner;
 
