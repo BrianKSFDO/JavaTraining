@@ -18,6 +18,8 @@ project.repositories {  //  repo's Gradle will use to get external dependencies
 
 // Can also do project.dependencies
 dependencies {
+//    compile 'com.google.code.gson:gson:2.8.0'
+    compile group: 'org.apache.commons', name: 'commons-text', version: '1.1'
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile project(':json-display') // ********* tells Gradle to bring in json-display JAR and bring into project JAR
 }

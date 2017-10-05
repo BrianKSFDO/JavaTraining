@@ -1,6 +1,7 @@
 package com.example.idea.strings;
 
 import java.util.Scanner;
+import org.apache.commons.text.StrBuilder;
 
 /**
  * Created by Brian on 10/2/2017.
@@ -57,5 +58,11 @@ public class MainStrings {
         for (char character : hiUserArray) {
             System.out.println(character);
         }
+
+        //*****************************      StrBuilder      ********************************
+        StrBuilder str = new StrBuilder().appendln("");
+        str.appendln("New");
+        str.appendln("Line");
+        System.out.println("Using StrBuilder: " + str);
     }
 }
