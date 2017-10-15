@@ -18,7 +18,8 @@ public class PersonTest {
 
     @Before
     public void setUp() throws Exception {
-        System.out.println("Before");
+        final String testNameLocal = new Exception().getStackTrace()[0].getMethodName();
+        System.out.println(testNameLocal);
         person1 = new Person("Tim", "Smith", 30);
     }
 
