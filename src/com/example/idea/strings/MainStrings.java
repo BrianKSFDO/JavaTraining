@@ -1,5 +1,6 @@
 package com.example.idea.strings;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
 import org.apache.commons.text.StrBuilder;
 
@@ -64,5 +65,40 @@ public class MainStrings {
         str.appendln("New");
         str.appendln("Line");
         System.out.println("Using StrBuilder: " + str);
+
+        //*****************************      Formatting      ********************************
+        System.out.println("Here is text.\tThat was a tab.\nThat was a new line");
+        System.out.print("use print ");
+        System.out.print("instead of println");
+        System.out.println();
+        System.out.printf("Total cost %-10d; quantity %d \n", 5, 120); // Formatting characters offer more control. %-10d left aligned 10 characters long
+
+        // Formatting integers
+        for (int i = 0; i < 13; i++) {
+            System.out.printf("%2d: text\n", i);
+        }
+        for (int i = 0; i < 13; i++) {
+            System.out.printf("%-2d: text\n", i);
+        }
+
+        // Formatting floating point values
+        System.out.printf("Total value: %f\n", 5.6);
+        System.out.printf("Total value: %.2f\n", 5.6);
+        System.out.printf("Total value: %.2f\n", 5.687);
+        System.out.printf("Total value: %6.1f\n", 235.23687);
+
+        //*****************************      Primitive To String ********************************
+        int intVal = 42;
+        String fromInt = Integer.toString(intVal);
+        System.out.println(fromInt);
+
+        boolean boolVal = true;
+//		String fromBool = Boolean.toString(fromBool);
+
+        long longVal = 10_000_000;
+        System.out.println(longVal);
+        NumberFormat formatter = NumberFormat.getNumberInstance();
+        String formatted = formatter.format(longVal);
+        System.out.println(formatted);
     }
 }
