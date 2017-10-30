@@ -37,15 +37,15 @@ public class ClockDegreesTest {
 
         helper.calcClockAngle(3, 15);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(3, 15));
-        Assert.assertEquals(7.5, helper.calcClockAngle(3, 15), 1);
+        Assert.assertEquals(7.5, helper.calcClockAngle(3, 15), 0);
 
         helper.calcClockAngle(12, 30);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(12, 30));
-        Assert.assertEquals(165, helper.calcClockAngle(12, 30), 1);
+        Assert.assertEquals(165, helper.calcClockAngle(12, 30), 0);
 
         helper.calcClockAngle(3, 30);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(3, 30));
-        Assert.assertEquals(75, helper.calcClockAngle(3, 30), 1);
+        Assert.assertEquals(75, helper.calcClockAngle(3, 30), 0);
 
 //        helper.calcClockAngle(1, 45);
 //        System.out.println("Degrees difference in clock " + helper.calcClockAngle(1, 45));
@@ -57,19 +57,19 @@ public class ClockDegreesTest {
 
         helper.calcClockAngle(12, 00);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(12, 00));
-        Assert.assertEquals(0, helper.calcClockAngle(12, 00), 1);
+        Assert.assertEquals(0, helper.calcClockAngle(12, 00), 0);
 
         helper.calcClockAngle(1, 05);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(1, 05));
-        Assert.assertEquals(2.5, helper.calcClockAngle(1, 05), 1);
+        Assert.assertEquals(2.5, helper.calcClockAngle(1, 05), 0);
 
         helper.calcClockAngle(1, 5);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(1, 5));
-        Assert.assertEquals(2.5, helper.calcClockAngle(1, 5), 1);
+        Assert.assertEquals(2.5, helper.calcClockAngle(1, 5), 0);
 
         helper.calcClockAngle(01, 05);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(01, 05));
-        Assert.assertEquals(2.5, helper.calcClockAngle(01, 05), 1);
+        Assert.assertEquals(2.5, helper.calcClockAngle(01, 05), 0);
     }
 
     @Test

@@ -6,6 +6,8 @@
 JavaTraining.iml
 .gradle/
 build/
+show-date/out/
+
 
 
 # Compiled class file
