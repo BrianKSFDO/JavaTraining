@@ -37,7 +37,7 @@ public class ClockDegreesTest {
 
         helper.calcClockAngle(3, 15);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(3, 15));
-        Assert.assertEquals(7.51, helper.calcClockAngle(3, 15), 0);
+        Assert.assertEquals(7.5, helper.calcClockAngle(3, 15), 0);
 
         helper.calcClockAngle(12, 30);
         System.out.println("Degrees difference in clock " + helper.calcClockAngle(12, 30));
