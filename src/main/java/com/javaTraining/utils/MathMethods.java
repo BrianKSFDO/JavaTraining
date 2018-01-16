@@ -1,4 +1,4 @@
-package com.javaTraining.util;
+package com.javaTraining.utils;
 
 // Add File as a Favorite by right-clicking on File tab
 public class MathMethods {

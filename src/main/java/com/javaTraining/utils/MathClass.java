@@ -1,4 +1,4 @@
-package com.javaTraining.util;
+package com.javaTraining.utils;
 
 /**
  * Created by Brian on 10/31/2017.

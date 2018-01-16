@@ -2,12 +2,7 @@ package com.javaTraining;
 
 import com.google.gson.Gson;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
-
-import static com.javaTraining.util.MathMethods.*;
 
 /**
  * This is my <b>Main</b> Runner class
