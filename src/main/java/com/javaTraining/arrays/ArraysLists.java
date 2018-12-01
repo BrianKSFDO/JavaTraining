@@ -18,8 +18,7 @@ public class ArraysLists {
         numbers.add(20);
         numbers.add(30);
         numbers.add(40);
-        numbers.add(50);
-        
+
         System.out.println(numbers.get(2));
 
 
